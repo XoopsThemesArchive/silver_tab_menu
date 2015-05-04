@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+
+<body class="body">
+
+<{include_php file="$xoops_rootpath/themes/silver_tab_menu/ex_assign.php"}>
+
+<div id="container_wrap">
+	<div id="container">
+		<div id="main_wrap">
+			<div id="main">
+<!-- ヘッダ定義 -->
+<div id="head_wrap">
+	<div id="head">
+		<div id="line_1">
+			<div class="logo_wrap">
+				<div class="logo">
+					<a href="<{$xoops_url}>/"><h1 class="h1"><{$xoops_sitename}></h1></a>
+				</div>
+			</div>
+			<div class="info_wrap">
+				<div class="info">
+					<{if $xoops_isuser}>
+			<!--ユーザーがログインしていたら-->
+						welcome&nbsp;<{$xoops_uname}>!
+					<{else}>
+			<!-- ログインしていないなら -->
+						<a href="<{$xoops_url}>/register.php">
+						register now?</a>&nbsp;|&nbsp;<a href="<{$xoops_url}>/user.php">lost pass?</a>
+					<{/if}>
+				</div>
+				<div class="info">
+					<{if !$xoops_isuser}>
+			<!-- ログインしていないなら -->
+					<form action="<{$xoops_url}>/user.php" method="post" style="margin: 0px;">
+					name&nbsp;
+					<input class="input" type="text" name="uname" size="18"	onMouseOver"this.focus();" onFocus"if(this.value == 'username') this.value ='';" />
+					&nbsp;pass&nbsp;
+					<input class="input" type="password" name="pass" size="18" />
+					<input type="hidden" name="op" value="login" />
+					&nbsp;
+					<input class="login" type="submit" value="login" />
+					</form>
+			<!--　ログインしていたら　-->
+					<{else}>
+					<a href="<{$xoops_url}>/user.php">ステータス</a>&nbsp;&nbsp;|&nbsp;
+					<a href="<{$xoops_url}>/notifications.php">情報通知</a>&nbsp;&nbsp;|&nbsp;
+					<a href="<{$xoops_url}>/viewpmsg.php">受信箱</a>&nbsp;&nbsp;|&nbsp;
+					<a href="<{$xoops_url}>/user.php?op=logout">ログアウト</a>
+					<{if $xoops_isadmin}>|&nbsp;&nbsp;<a href="<{$xoops_url}>/admin.php">管理用</a><{/if}>
+					<{/if}>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="float_menu_left">
+	<div id="float_menu_right">
+	<div id="float_menu">
+<!--タブメニュー定義-->
+	<div id="<{if $ex_moduledir == ""}>tab_on<{else}>tab_off<{/if}>"><a href="<{$xoops_url}>/">Home</a></div>
+	<div id="<{if $ex_moduledir == "bulletin"}>tab_on<{else}>tab_off<{/if}>"><a href="<{$xoops_url}>/modules/bulletin">News</a></div>
+	<div id="<{if $ex_moduledir == "xhnewbb"}>tab_on<{else}>tab_off<{/if}>"><a href="<{$xoops_url}>/modules/xhnewbb">Forum</a></div>
+	<!--<div id="<{if $ex_moduledir == "html_tag2"}>tab_on<{else}>tab_off<{/if}>"><a href="<{$xoops_url}>/modules/html_tag2">HTML</a></div>-->
+	<div id="<{if $ex_moduledir == "myalbum0"}>tab_on<{else}>tab_off<{/if}>"><a href="<{$xoops_url}>/modules/myalbum0">Album</a></div>
+	<div id="<{if $ex_moduledir == "mylinks"}>tab_on<{else}>tab_off<{/if}>"><a href="<{$xoops_url}>/modules/mylinks">Link</a></div>
+	<div id="<{if $ex_moduledir == "mydownloads"}>tab_on<{else}>tab_off<{/if}>"><a href="<{$xoops_url}>/modules/mydownloads">Download</a></div>
+	<div id="<{if $ex_moduledir == "sitemap"}>tab_on<{else}>tab_off<{/if}>"><a href="<{$xoops_url}>/modules/sitemap">Sitemap</a></div>
+	<div id="<{if $ex_moduledir == "contact"}>tab_on<{else}>tab_off<{/if}>"><a href="<{$xoops_url}>/modules/contact">Contact</a></div>
+<!--タブメニュー終了-->
+	</div>
+	</div>
+	</div>
+</div>
+<!-- ヘッダ終了 -->
+<!--ボディ部定義-->
+<div class="body_column_left">
+<div class="body_column_right">
+<div class="body_column">
+<!-- メイン部分定義 -->
+	<div id="centercolumn">
+	<{if $xoops_showcblock == 1}>
+<!-- 中央中央ブロック定義 -->
+		<{foreach item=block from=$xoops_ccblocks}>
+		<div id="centerCcolumn">
+			<{if ! $block.title|strstr:"none"}>
+				<div class="blockTitle"><{$block.title}></div>
+			<{/if}>
+				<div class="blockContent"><{$block.content}></div>
+		</div>
+		<{/foreach}>
+<!-- 中央中央ブロック終了 -->
+		<div class="cl_cr_col">
+<!-- 中央左ブロック定義 -->
+			<div id="centerLcolumn">
+			<{foreach item=block from=$xoops_clblocks}>
+				<{if ! $block.title|strstr:"none"}>
+					<div><div class="blockTitle"><img src="<{$xoops_imageurl}>center_title.gif"  alt="title" />&nbsp;<{$block.title}></div></div>
+				<{/if}>
+					<div><div class="blockContent"><{$block.content}></div></div>
+			<{/foreach}>
+			</div>
+<!-- 中央左ブロック終了 -->
+<!-- 中央右ブロック定義 -->
+			<div id="centerRcolumn">
+			<{foreach item=block from=$xoops_crblocks}>
+				<{if ! $block.title|strstr:"none"}>
+					<div><div class="blockTitle"><img src="<{$xoops_imageurl}>center_title.gif"  alt="title" />&nbsp;<{$block.title}></div></div>
+				<{/if}>
+					<div><div class="blockContent"><{$block.content}></div></div>
+			<{/foreach}>
+			</div>
+<!-- 中央右ブロック終了 -->
+		</div>
+	<{/if}>
+<!-- メインコンテンツ定義 -->
+		<div id="content"><{$xoops_contents}></div>
+	</div>
+<!-- メインコンテンツ終了 -->
+</div>
+</div>
+</div>
+<!-- フッタ部定義 -->
+	<div class="footerbar">
+		<h2><{$xoops_footer}><br />Theme Designed by&nbsp;&nbsp;<a href="http://portal.expiece.com/" target="_blank">EXTRAFFIC</a></h2>
+	</div>
+<!-- フッタ部終了 -->
+			</div>
+		</div>
+		<div id="side_wrap">
+			<div id="side">
+<!-- 左ブロック定義 -->
+<div class="left_right_col">
+	<div id="leftcolumn">
+	<{if $xoops_showlblock == 1}>
+		<{foreach item=block from=$xoops_lblocks}>
+		<{if ! $block.title|strstr:"none"}>
+			<div><div class="blockTitle"><{$block.title}></div></div>
+		<{/if}>
+			<div><div class="blockContent"><{$block.content}></div></div>
+		<{/foreach}>
+	<{/if}>
+	</div>
+<!-- 左ブロック終了 -->
+<!-- 右ブロック定義 -->
+	<div id="rightcolumn">
+	<{if $xoops_showrblock == 1}>
+		<{foreach item=block from=$xoops_rblocks}>
+		<{if ! $block.title|strstr:"none"}>
+			<div><div class="blockTitle"><img src="<{$xoops_imageurl}>title.gif"  alt="title" />&nbsp;<{$block.title}></div></div>
+		<{/if}>
+			<div class="blockCont_L_T">
+			<div class="blockCont_R_T">
+			<div class="blockCont_T">
+			</div></div></div>
+			<div class="blockCont_L">
+			<div class="blockCont_R">
+			<div class="blockContent">
+				<{$block.content}>
+			</div>
+			</div>
+			</div>
+		<{/foreach}>
+	<{/if}>
+	</div>
+</div>
+<!-- 右ブロック終了 -->
+	</div>
+</div>
+</body>
+</html>

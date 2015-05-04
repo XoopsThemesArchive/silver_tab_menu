@@ -1,0 +1,779 @@
+/*------------------------------------------------
+全般定義
+------------------------------------------------*/
+* {padding: 0; margin: 0;}
+
+.body {
+	color: #111;
+	background: #ccc;
+	font-size: 12px;
+	line-height: 1.5;
+	text-align: left;
+	font-family: arial;
+}
+/*-----------------------------------------------
+テーブル全般定義
+-----------------------------------------------*/
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+table td {
+	vertical-align: top;
+}
+th {
+	padding: 5px;
+	vertical-align: middle;
+	background: #eee;
+	background-image: url(border.gif);
+	background-position: left bottom;
+	background-repeat: repeat-x;
+}
+th a {
+	color: #77f;
+}
+/*-----------------------------------------------
+リンク全般定義
+-----------------------------------------------*/
+a {
+	color: #77f;
+	text-decoration: none;
+}
+a:hover {
+	color: #f77;
+	text-decoration: underline;
+}
+/*-----------------------------------------------
+一般タグ全般定義
+-----------------------------------------------*/
+h1 {
+	font-size: 20px;
+	font-weight: bold;
+	margin: 0 auto;
+	padding: 0;
+}
+h2,h3,h4,h5 {
+	font-size: 12px;
+	font-weight: normal;
+	margin: 1px 0;
+	padding: 0;
+}
+p,b,i,u,form {
+	margin: 1px 0;
+	padding: 0;
+	font-size: 12px;
+}
+/*-----------------------------------------------
+リスト表示全般定義
+-----------------------------------------------*/
+ul {
+	margin: 0;
+	padding: 2px;
+	list-style: decimal inside;
+	text-align: left;
+}
+li {
+	margin-left: 15px;
+	padding: 0;
+	list-style: disc outside;
+	color: #039;
+}
+/*-----------------------------------------------
+タブメニュー定義
+-----------------------------------------------*/
+#tab_on a {
+	float: left;
+	display: block;
+	width: 75px;
+	height: 30px;
+	text-align: center;
+	line-height: 2.5;
+	background-image: url(float_menu_active.gif);
+	background-position: left bottom;
+	background-repeat: repeat-x;
+}
+#tab_off a {
+	float: left;
+	display: block;
+	width: 75px;
+	height: 30px;
+	text-align: center;
+	line-height: 2.5;
+	background-image: url(float_menu_a.gif);
+	background-position: left bottom;
+	background-repeat: repeat-x;
+}
+#tab_off a:hover {
+	float: left;
+	display: block;
+	width: 75px;
+	height: 30px;
+	text-align: center;
+	line-height: 2.5;
+	background-image: url(float_menu_hover.gif);
+	background-position: left bottom;
+	background-repeat: repeat-x;
+}
+/*-----------------------------------------------
+[ コンテナ定義 ]
+-----------------------------------------------*/
+#container_wrap {
+	position: relative;
+	left: 50%;
+	margin-left: -400px;
+	text-align: center;
+	overflow: hidden;
+	width: 800px;
+	padding: 0;
+}
+/*-----------------------------------------------
+[ コンテナ定義 ] #container_wrap
+-----------------------------------------------*/
+#container {
+	padding: 0 0 10px 0;
+}
+/*-----------------------------------------------
+[ メイン定義 ] #container
+-----------------------------------------------*/
+#main_wrap {
+	float: left;
+}
+/*-----------------------------------------------
+[ メイン定義 ] #main_wrap
+-----------------------------------------------*/
+#main {
+}
+/*-----------------------------------------------
+[ サイド定義 ] #container
+-----------------------------------------------*/
+#side_wrap {
+	float: right;
+}
+/*-----------------------------------------------
+[ サイド定義 ] #side_wrap
+-----------------------------------------------*/
+#side {
+}
+/*-----------------------------------------------
+[ ヘッダ部定義 ] #container
+-----------------------------------------------*/
+#head_wrap {
+	width: 620px;
+	text-align: left;
+	background: #ccc;
+}
+#head {
+	height:80px;
+}
+#line_1 {
+	width: 100%;
+}
+.logo_wrap {
+	float: left;
+}
+.logo {
+	width: 280px;
+	background-image: url(logo_back.gif);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+}
+.logo a {
+	color: #fff;
+}
+.h1 {
+	text-align: center;
+	margin-top: 15px;
+}
+.info_wrap {
+	float: right;
+	margin-right: 5px;
+}
+.info {
+	width: 300px;
+	margin-top: 10px;
+	line-hight: 150%;
+	text-align: right;
+}
+#float_menu_left {
+	float: right;
+	width: 620px;
+	height: 30px;
+	background: #fff;
+	background-image: url(float_menu_left.gif);
+	background-position: left bottom;
+	background-repeat: repeat-y;
+}
+#float_menu_right {
+	width: 610px;
+	float: right;
+	height: 30px;
+	background: #fff;
+	background-image: url(float_menu_right.gif);
+	background-position: right bottom;
+	background-repeat: repeat-y;
+}
+#float_menu {
+	width: 600px;
+	height: 30px;
+	float: left;
+	background: #fff;
+	background-image: url(float_menu_a.gif);
+	background-position: left bottom;
+	background-repeat: repeat-x;
+}
+.login {
+	font-family: arial;
+	font-size: 10px;
+	color: #777;
+	border: 1px solid #777;
+	background: #f5f5f5;
+}
+.input {
+	width: 80px;
+	height: 15px;
+}
+/*-----------------------------------------------
+ページナビ
+-----------------------------------------------*/
+span.pagenav_on {
+	font-size:15px;
+	text-decoration:none;
+	font-weight:bold;
+	background:#fff;
+	border: 1px solid #ddd;
+	padding: 5px 8px;
+}
+span.pagenav_off {
+	font-size:15px;
+	background:#eee;
+	text-decoration:none;
+	border:1px solid #aaa;
+	padding: 5px 8px;
+}
+span.pagenav_off a {
+	color:#039;
+}
+/*-----------------------------------------------
+[ 包括＜中央ブロック＞定義 ] #container
+-----------------------------------------------*/
+.body_column_left {
+	float: left;
+	width: 620px;
+	text-align: left;
+	background: #fff;
+	background-image: url(body_column_left.gif);
+	background-position: left top;
+	background-repeat: repeat-y;
+}
+.body_column_right {
+	float: right;
+	width: 610px;
+	background-image: url(body_column_right.gif);
+	background-position: right top;
+	background-repeat: repeat-y;
+}
+.body_column {
+	float: left;
+	width: 600px;
+}
+/*-----------------------------------------------
+[ メインコンテンツ定義 ] .body_column
+-----------------------------------------------*/
+#content {
+	padding: 8px 0;
+	margin: 0px;
+}
+/*-----------------------------------------------
+[ 中央ブロックの定義 ] .body_column
+-----------------------------------------------*/
+#centercolumn {
+	width: 100%;
+}
+/*-----------------------------------------------
+[ 中央-中央ブロックの定義 ] .centercolumn
+-----------------------------------------------*/
+#centerCcolumn {
+	overflow: hidden;
+}
+#centerCcolumn .blockTitle {
+	padding: 5px 5px 5px 10px;
+	margin: 0;
+	border-top: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	background: #eee;
+	background-image: url(c_title.gif);
+	background-position: left bottom;
+	background-repeat: repeat-x;
+}
+#centerCcolumn .blockContent {
+	padding: 3px;
+	margin-bottom: 10px;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	background: #fff;
+	background-image: url(c_content.gif);
+	background-position: left bottom;
+	background-repeat: repeat-x;
+}
+/*-----------------------------------------------
+[ 包括＜中央右・中央左ブロック＞定義 ] .centercolumn
+-----------------------------------------------*/
+.cl_cr_col {}
+/*-----------------------------------------------
+[ 中央-左ブロックの定義 ] .cl_cr_col
+-----------------------------------------------*/
+#centerLcolumn {
+	float: left;
+	width: 295px;
+	overflow: hidden;
+}
+#centerLcolumn .blockTitle {
+	padding: 5px 5px 5px 0;
+	margin: 0;
+	vertical-align: middle;
+	font-size: 15px;
+}
+#centerLcolumn .blockContent {
+	padding: 5px;
+	margin-bottom: 5px;
+	border-bottom: 1px solid #69f;
+	background-image: url(column_content.gif);
+	background-position: left top;
+	background-repeat: repeat-x;
+}
+/*-----------------------------------------------
+[ 中央-右ブロックの定義 ] .cl_cr_col
+-----------------------------------------------*/
+#centerRcolumn {
+	float: right;
+	width: 295px;
+	overflow: hidden;
+}
+#centerRcolumn .blockTitle {
+	padding: 5px 5px 5px 0;
+	margin: 0;
+	vertical-align: middle;
+	font-size: 15px;
+}
+#centerRcolumn .blockContent {
+	padding: 5px;
+	margin-bottom: 5px;
+	border-bottom: 1px solid #69f;
+	background-image: url(column_content.gif);
+	background-position: left top;
+	background-repeat: repeat-x;
+}
+/*-----------------------------------------------
+[ 包括＜右・左ブロック＞の定義 ] .body_column
+-----------------------------------------------*/
+.left_right_col {
+	clear: both;
+	width: 180px;
+	text-align :left;
+}
+/*-----------------------------------------------
+[ 左ブロックの定義 ] .left_right_col
+-----------------------------------------------*/
+#leftcolumn {
+	overflow: auto;
+}
+#leftcolumn a {
+	color: #77f;
+}
+#leftcolumn a:hover {
+	color: #f77;
+}
+/*-----------------------------------------------
+[ 左ブロックタイトルの定義 ] #leftcolumn
+-----------------------------------------------*/
+#leftcolumn .blockTitle {
+	padding: 3px 0 3px 10px;
+	margin: 0;
+	color: #fff;
+	font-size: 15px;
+	background-image: url(l_title.gif);
+	background-position: left top;
+	background-repeat: repeat-x;
+}
+/*-----------------------------------------------
+[ 左ブロックコンテンツの定義 ] #leftcolumn
+-----------------------------------------------*/
+#leftcolumn .blockContent {
+	padding: 5px 5px 8px 5px;
+	margin: 0;
+	overflow: auto;
+	border-bottom: 3px solid #ccc;
+	background-image: url(l_column_content.gif);
+	background-position: left bottom;
+	background-repeat: repeat-x;
+}
+/*-----------------------------------------------
+[ メインメニューの定義 ] #leftcolumn
+-----------------------------------------------*/
+#mainmenu a {
+	display: block;
+	margin: 0;
+	padding: 4px;
+}
+#mainmenu a:hover {
+	background-image: url(menu.gif);
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+#mainmenu a.menuTop {
+	padding-left: 3px;
+}
+#mainmenu a.menuMain {
+	padding-left: 3px;
+}
+#mainmenu a.menuSub {
+	padding-left: 15px;
+	background: #ddd;
+	border-bottom: 1px solid #ccc;
+}
+/*-----------------------------------------------
+[ ユーザメニューの定義 ] #leftcolumn
+-----------------------------------------------*/
+#usermenu a {
+	display: block;
+	margin: 0;
+	padding: 4px;
+}
+#usermenu a:hover {
+	background: #eee;
+}
+#usermenu a.menuTop {
+}
+#usermenu a.highlight {
+}
+/*-----------------------------------------------
+[ 右ブロックの定義 ] .left_right_col
+-----------------------------------------------*/
+#rightcolumn {
+	overflow: auto;
+}
+#rightcolumn a {
+	color: #039;
+}
+#rightcolumn a:hover {
+	color: #f77;
+}
+
+/*-----------------------------------------------
+[ 右ブロックタイトルの定義 ] #rightcolumn
+-----------------------------------------------*/
+#rightcolumn .blockTitle {
+	padding: 5px 5px 5px 0;
+	margin: 0;
+	vertical-align: middle;
+	font-size: 15px;
+}
+/*-----------------------------------------------
+[ 右ブロックコンテンツの定義 ] #rightcolumn
+-----------------------------------------------*/
+#rightcolumn .blockCont_L_T {
+	float: left;
+	width: 180px;
+	height: 10px;
+	background: #c3c3c3;
+	background-image: url(blockCont_L_T.gif);
+	background-position: left top;
+	background-repeat: no-repeat;
+}
+#rightcolumn .blockCont_R_T {
+	float: right;
+	width: 175px;
+	height: 10px;
+	background: #c3c3c3;
+	background-image: url(blockCont_R_T.gif);
+	background-position: right top;
+	background-repeat: no-repeat;
+}
+#rightcolumn .blockCont_T {
+	float: left;
+	width: 170px;
+	height: 10px;
+	background: #c3c3c3;
+}
+#rightcolumn .blockCont_L {
+	float: left;
+	width: 180px;
+	border-bottom: 1px solid #ccc;
+	background: #c3c3c3;
+	background-image: url(blockCont_L.gif);
+	background-position: left bottom;
+	background-repeat: no-repeat;
+}
+#rightcolumn .blockCont_R {
+	float: right;
+	width: 175px;
+	background: #c3c3c3;
+	background-image: url(blockCont_R.gif);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+}
+#rightcolumn .blockContent {
+	float: left;
+	overflow: auto;
+	width: 170px;
+	padding: 0 0 10px 0;
+	margin: 0;
+	background: #c3c3c3;
+}
+/*-----------------------------------------------
+[ フッタブロックの定義 ] #container
+-----------------------------------------------*/
+.footerbar {
+	width: 610px;
+	margin-top: 10px;
+	text-align: center;
+	font-family: arial;
+	font-size: 11px;
+}
+.footerbar a {
+	color: #77f;
+}
+.footerbar a:hover {
+	color: #f77;
+}
+/*-----------------------------------------------
+フォーラムの定義：外枠
+-----------------------------------------------*/
+.outer {}
+/*-----------------------------------------------
+フォーラムの定義：投稿情報欄
+-----------------------------------------------*/
+.head {
+	padding: 5px;
+	background: #f6f6f6;
+	background-image: url(border_heavy.gif);
+	background-position: left bottom;
+	background-repeat: repeat-x;
+}
+/*-----------------------------------------------
+フォーラムの定義：交互色定義
+-----------------------------------------------*/
+.even {
+	padding: 5px;
+	background: #fafafa;
+	background-image: url(border_light.gif);
+	background-position: left bottom;
+	background-repeat: repeat-x;
+}
+.odd {
+	padding: 5px;
+	background: #fdfdfd;
+	background-image: url(border_light.gif);
+	background-position: left bottom;
+	background-repeat: repeat-x;
+}
+tr.even td {
+	padding: 5px;
+	background: #fafafa;
+	background-image: url(border_light.gif);
+	background-position: left bottom;
+	background-repeat: repeat-x;
+}
+tr.odd td {
+	padding: 5px;
+	background: #fdfdfd;
+	background-image: url(border_light.gif);
+	background-position: left bottom;
+	background-repeat: repeat-x;
+}
+/*-----------------------------------------------
+フォーラムの定義：フッター
+-----------------------------------------------*/
+.foot {
+	padding: 5px;
+	background: #f6f6f6;
+	background-image: url(border_heavy.gif);
+	background-position: left bottom;
+	background-repeat: repeat-x;
+}
+/*-----------------------------------------------
+最新ニュース定義：外枠
+-----------------------------------------------*/
+.item {}
+/*-----------------------------------------------
+最新ニュース定義：タイトルバー
+-----------------------------------------------*/
+.itemHead {
+	padding: 6px 3px 3px 10px;
+ 	color: #039;
+	border-bottom: 1px solid #039;
+	background: #849dce;
+	background-image: url(itemhead.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+/*-----------------------------------------------
+最新ニュース定義：投稿情報欄
+-----------------------------------------------*/
+.itemInfo {
+	padding: 3px;
+	text-align: right;
+	background: #fff;
+}
+/*-----------------------------------------------
+最新ニュース定義：タイトル設定
+-----------------------------------------------*/
+.itemTitle a {
+	font-size: 130%;
+	color: #039;
+}
+/*-----------------------------------------------
+最新ニュース定義：投稿者
+-----------------------------------------------*/
+.itemPoster {
+	font-size: 100%;
+}
+/*-----------------------------------------------
+最新ニュース定義：投稿日
+-----------------------------------------------*/
+.itemPostDate {
+	font-size: 100%;
+}
+/*-----------------------------------------------
+最新ニュース定義：ステータス
+-----------------------------------------------*/
+.itemStats {
+	font-size: 100%;
+}
+/*-----------------------------------------------
+最新ニュース定義：コンテンツ部分
+-----------------------------------------------*/
+.itemBody {
+	padding: 5px;
+	border-top: 1px solid #aaa;
+	background: #fafafa;
+	background-image: url(itembody.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+.itemText {
+	padding: 0;
+	line-height: 150%;
+}
+.itemText:first-letter {
+	font-size: 150%;
+	font-weight: bold;
+}
+/*-----------------------------------------------
+最新ニュース定義：フッター
+-----------------------------------------------*/
+.itemFoot {
+	padding: 3px 3px 5px 5px;
+	text-align: right;
+	border-bottom: 1px solid #aaa;
+	background: #fafafa;
+	background-image: url(itemfoot.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}
+.itemAdminLink {
+	font-size: 100%;
+}
+.itemPermaLink {
+	font-size: 100%;
+}
+/*-----------------------------------------------
+システムメッセージ：エラー、コンファーム、リザルト
+-----------------------------------------------*/
+div.errorMsg {
+	padding: 10px;
+	font-weight: bold;
+	text-align: center;
+	background: #ffcccc;
+	border-top: 1px solid #ddddff;
+	border-left: 1px solid #ddddff;
+	border-right: 1px solid #aaaaaa;
+	border-bottom: 1px solid #aaaaaa;
+}
+div.confirmMsg {
+	padding: 10px;
+	font-weight: bold;
+	text-align: center;
+	color: #136c99;
+	background: #f6f6f6;
+	border-top: 1px solid #ddddff;
+	border-left: 1px solid #ddddff;
+	border-right: 1px solid #aaaaaa;
+	border-bottom: 1px solid #aaaaaa;
+}
+div.resultMsg {
+	padding: 10px;
+	font-weight: bold;
+	text-align: center;
+	color: #777;
+	background: #f6f6f6;
+	border-top: 1px solid silver;
+	border-left: 1px solid silver;
+	border-right: 1px solid #666666;
+	border-bottom: 1px solid #666666;
+}
+/*-----------------------------------------------
+Xoopsコード記述定義
+-----------------------------------------------*/
+div.xoopsCode {
+	padding: 0 6px 6px 6px;
+	background: #fff;
+	border: 1px inset #000080;
+	overflow: auto;
+	height: 200px;
+	width: 480px;
+}
+/*-----------------------------------------------
+引用部分定義
+-----------------------------------------------*/
+div.xoopsQuote {
+	padding: 3px;
+	background: #fff;
+	border: 1px inset #fff;
+	overflow: auto;
+	height: 200px;
+	width: 480px;
+}
+.comTitle {
+	margin-bottom: 2px;
+}
+.comText {
+	padding: 2px;
+}
+.comUserStat {
+	margin: 2px;
+	padding: 2px;
+	font-size: 10px;
+	color: #777;
+	border: 1px solid #ddd;
+	background: #eee;
+}
+.comUserStatCaption {
+	font-weight: normal;
+}
+.comUserStatus {
+	margin-left: 2px;
+	margin-top: 10px;
+	font-size: 10px;
+	color: #777;
+}
+.comUserRank {
+	margin: 2px;
+}
+.comUserRankText {
+	font-size: 10px;
+}
+.comUserRankImg {
+	border: 0;
+}
+.comUserName {}
+.comUserImg {
+	margin: 2px;
+}
+.comDate {
+	font-size: small;
+}
+.comDateCaption {
+}
